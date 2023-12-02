@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.13'
+}
+
+group 'tech.wolfdev'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+    implementation 'com.github.Vatuu:discord-rpc:1.6.2'
+    implementation("ch.qos.logback:logback-classic:1.2.8")
+    implementation group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
+}
+
+javafx {
+    version = "19"
+    modules = [ 'javafx.controls' ]
+}
+
+test {
+    useJUnitPlatform()
+}
